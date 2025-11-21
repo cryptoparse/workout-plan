@@ -1,170 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Military Calisthenics Beginner Program</title>
+
+<!-- Dark Mode + Core Styles -->
 <style>
-  :root {
-    color-scheme: dark;
-  }
+  :root { color-scheme: dark; }
+
   body {
-    background-color: #0d0d0d;
-    color: #e6e6e6;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #0b0c10;
+    color: #f5f5f5;
+    line-height: 1.6;
   }
-  a { color: #4aa3ff; }
-  .card {
-    background: #1a1a1a;
-    padding: 16px;
-    border-radius: 12px;
-    margin-bottom: 16px;
-    box-shadow: 0 0 8px rgba(255,255,255,0.05);
+
+  header {
+    background: #1f2833;
+    padding: 20px;
+    text-align: center;
+  }
+
+  h1 { margin: 0; font-size: 22px; color: #66fcf1; }
+
+  .section {
+    padding: 20px;
+    border-bottom: 1px solid #222;
+  }
+
+  .day-card {
+    background: #1f2833;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+  }
+
+  h2 { color: #45a29e; margin-top: 0; }
+  a { color: #66fcf1; }
+
+  .footer {
+    text-align: center;
+    padding: 20px;
+    color: #888;
+  }
+
+  /* Workout GIF styling */
+  .workout { margin-bottom: 22px; }
+  .workout img {
+    width: 100%;
+    max-width: 330px;
+    border-radius: 10px;
+    margin-top: 8px;
+    display: block;
   }
 </style>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Military Calisthenics Beginner Program</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #0b0c10;
-      color: #f5f5f5;
-      line-height: 1.6;
-    }
-    header {
-      background: #1f2833;
-      padding: 20px;
-      text-align: center;
-    }
-    h1 {
-      margin: 0;
-      font-size: 22px;
-      color: #66fcf1;
-    }
-    .section {
-      padding: 20px;
-      border-bottom: 1px solid #222;
-    }
-    .day-card {
-      background: #1f2833;
-      padding: 15px;
-      margin-bottom: 15px;
-      border-radius: 8px;
-    }
-    h2 {
-      color: #45a29e;
-      margin-top: 0;
-    }
-    a {
-      color: #66fcf1;
-    }
-    .footer {
-      text-align: center;
-      padding: 20px;
-      color: #888;
-    }
-  </style>
-  <link rel="manifest" href="/manifest.json">
-  <meta name="theme-color" content="#000000">
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js');
-      });
-    }
-  </script>
+
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#000000">
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js');
+  });
+}
+</script>
 </head>
+
+
 <body>
-  <header>
-    <h1>Military Calisthenics (Beginner)</h1>
-    <p>6‑Week Home Training Program</p>
-  </header>
+<header>
+  <h1>Military Calisthenics (Beginner)</h1>
+  <p>6-Week Home Training Program</p>
+</header>
 
-  <div class="section">
-    <h2>Daily Warmup (5 min)</h2>
-    <ul>
-      <li>Jumping Jacks – <a href="https://youtu.be/c4DAnQ6DtF8" target="_blank">Demo</a></li>
-      <li>Arm Circles – <a href="https://youtu.be/2PAsF6KNJ7w" target="_blank">Demo</a></li>
-      <li>High Knees – <a href="https://youtu.be/OAJ_J3EZkdY" target="_blank">Demo</a></li>
-      <li>Hip Rotations – <a href="https://youtu.be/-gkNzY7rxnY" target="_blank">Demo</a></li>
-      <li>March in Place – <a href="https://youtu.be/m7fQRS-7jY8" target="_blank">Demo</a></li>
-    </ul>
-  </div>
 
-  <div class="section">
-    <h2>Weekly Schedule</h2>
+<!-- WARMUP -->
+<div class="section">
+  <h2>Daily Warmup (5 min)</h2>
+  <ul>
 
-    <div class="day-card">
-      <h3>Monday – Push Day</h3>
-      <ul>
-        <li>Incline Push‑ups – <a href="https://youtu.be/7Z6P6x8mzHM" target="_blank">Demo</a></li>
-        <li>Knee Push‑ups – <a href="https://youtu.be/2pLT-olgUJs" target="_blank">Demo</a></li>
-        <li>Pike Push‑ups – <a href="https://youtu.be/qqW6tZpQe9A" target="_blank">Demo</a></li>
-        <li>Chair Dips – <a href="https://youtu.be/6kALZikXxLc" target="_blank">Demo</a></li>
-        <li>Shoulder Taps – <a href="https://youtu.be/0cKTV2mgDwY" target="_blank">Demo</a></li>
-      </ul>
-    </div>
+    <li class="workout">
+      <strong>Jumping Jacks</strong> –
+      <a href="https://youtu.be/c4DAnQ6DtF8" target="_blank">Demo</a>
+      <img src="https://media.tenor.com/NaZrN1GyNqsAAAAC/jumping-jacks.gif">
+    </li>
 
-    <div class="day-card">
-      <h3>Tuesday – Legs + Conditioning</h3>
-      <ul>
-        <li>Bodyweight Squats – <a href="https://youtu.be/aclHkVaku9U" target="_blank">Demo</a></li>
-        <li>Reverse Lunges – <a href="https://youtu.be/1TKvF3Q2XoA" target="_blank">Demo</a></li>
-        <li>Glute Bridges – <a href="https://youtu.be/m2Zx-57cSok" target="_blank">Demo</a></li>
-        <li>Calf Raises – <a href="https://youtu.be/-M4-G8p8fmc" target="_blank">Demo</a></li>
-        <li>Fast Feet – <a href="https://youtu.be/8q2v8pI5pDo" target="_blank">Demo</a></li>
-      </ul>
-    </div>
+    <li class="workout">
+      <strong>Arm Circles</strong> –
+      <a href="https://youtu.be/2PAsF6KNJ7w" target="_blank">Demo</a>
+      <img src="https://media.tenor.com/YfI85WMwPxwAAAAC/arm-circles.gif">
+    </li>
 
-    <div class="day-card">
-      <h3>Wednesday – Core & Stability</h3>
-      <ul>
-        <li>Plank – <a href="https://youtu.be/pSHjTRCQxIw" target="_blank">Demo</a></li>
-        <li>Leg Raises – <a href="https://youtu.be/JB2oyawG9KI" target="_blank">Demo</a></li>
-        <li>Heel Touches – <a href="https://youtu.be/JJ0QKZ4GQ6w" target="_blank">Demo</a></li>
-        <li>Dead Bug – <a href="https://youtu.be/6U5aU4QzKy4" target="_blank">Demo</a></li>
-        <li>Mountain Climbers – <a href="https://youtu.be/6kALZikXxLc" target="_blank">Demo</a></li>
-      </ul>
-    </div>
+    <li class="workout">
+      <strong>High Knees</strong> –
+      <a href="https://youtu.be/OAJ_J3EZkdY" target="_blank">Demo</a>
+      <img src="https://media.tenor.com/t3NrSTiXwEoAAAAC/high-knees.gif">
+    </li>
 
-    <div class="day-card">
-      <h3>Thursday – Full Body Strength</h3>
-      <ul>
-        <li>Push-ups – <a href="https://youtu.be/_l3ySVKYVJ8" target="_blank">Demo</a></li>
-        <li>Squats – <a href="https://youtu.be/aclHkVaku9U" target="_blank">Demo</a></li>
-        <li>Bedsheet Rows – <a href="https://youtu.be/GN78C2zpp8o" target="_blank">Demo</a></li>
-        <li>Good Mornings – <a href="https://youtu.be/8tE0xW4Pp10" target="_blank">Demo</a></li>
-        <li>Burpees – <a href="https://youtu.be/qLBImHhCXSw" target="_blank">Demo</a></li>
-      </ul>
-    </div>
+    <li class="workout">
+      <strong>Hip Rotations</strong> –
+      <a href="https://youtu.be/-gkNzY7rxnY" target="_blank">Demo</a>
+      <img src="https://media.tenor.com/x3E5rqsYqSAAAAAC/hip-rotation.gif">
+    </li>
 
-    <div class="day-card">
-      <h3>Friday – HIIT Day</h3>
-      <ul>
-        <li>High Knees – <a href="https://youtu.be/OAJ_J3EZkdY" target="_blank">Demo</a></li>
-        <li>Fast Punches – <a href="https://youtu.be/yE6JjdfH1nY" target="_blank">Demo</a></li>
-        <li>Mountain Climbers – <a href="https://youtu.be/cnyTQDSE884" target="_blank">Demo</a></li>
-        <li>Jump Squats – <a href="https://youtu.be/A-cFYWvaHr0" target="_blank">Demo</a></li>
-      </ul>
-    </div>
+    <li class="workout">
+      <strong>March in Place</strong> –
+      <a href="https://youtu.be/m7fQRS-7jY8" target="_blank">Demo</a>
+      <img src="https://media.tenor.com/0oEqlJS3BM0AAAAC/march-in-place.gif">
+    </li>
 
-    <div class="day-card">
-      <h3>Saturday – Endurance</h3>
-      <ul>
-        <li>Brisk Walk (20–25 min)</li>
-        <li>Stair Work (15 min)</li>
-        <li>Jog in Place – <a href="https://youtu.be/1oed-UmAxFs" target="_blank">Demo</a></li>
-        <li>Agility Footwork – <a href="https://youtu.be/9x7F8gcKqVk" target="_blank">Demo</a></li>
-      </ul>
-    </div>
+  </ul>
+</div>
 
-  </div>
 
-  <div class="footer">
-    <p>Military Calisthenics Beginner Program • 2025</p>
-  </div>
-  <script src="/pwa-init.js"></script>
+<!-- WEEKLY SCHEDULE -->
+<div class="section">
+<h2>Weekly Schedule</h2>
+
+
+<!-- MONDAY -->
+<div class="day-card">
+<h3>Monday – Push Day</h3>
+<ul>
+
+<li class="workout">
+  <strong>Incline Push-ups</strong> –
+  <a href="https://youtu.be/7Z6P6x8mzHM" target="_blank">Demo</a>
+  <img src="https://media.tenor.com/ZgrO2KDqHlgAAAAC/pushup-incline.gif">
+</li>
+
+<li class="workout">
+  <strong>Knee Push-ups</strong> –
+  <a href="https://youtu.be/2pLT-olgUJs" target="_blank">Demo</a>
+  <img src="https://media.tenor.com/Y7U1_5kQ34UAAAAC/knee-push-up.gif">
+</li>
+
+<li class="workout">
+  <strong>Pike Push-ups</strong> –
+  <a href="https://youtu.be/qqW6tZpQe9A" target="_blank">Demo</a>
+  <img src="https://media.tenor.com/o_N8MPmTQ0oAAAAC/pike-push-up.gif">
+</li>
+
+<li class="workout">
+  <strong>Chair Dips</strong> –
+  <a href="https://youtu.be/6kALZikXxLc" target="_blank">Demo</a>
+  <img src="https://media.tenor.com/fjJvkQpfDccAAAAC/tricep-dip.gif">
+</li>
+
+<li class="workout">
+  <strong>Shoulder Taps</strong> –
+  <a href="https://youtu.be/0cKTV2mgDwY" target="_blank">Demo</a>
+  <img src="https://media.tenor.com/1A7u-7u1yKIAAAAC/shoulder-taps.gif">
+</li>
+
+</ul>
+</div>
+
+
+<!-- TUESDAY -->
+<div class="day-card">
+<h3>Tuesday – Legs + Conditioning</h3>
+<ul>
+
+<li class="workout">
+  <strong>Bodyweight Squats</strong> –
+  <a href="https://youtu.be/aclHkVaku9U" target="_blank">Demo</a>
+  <img src="https://media.tenor.com/K0Wc0RvrR9QAAAAC/squat.gif">
+</li>
+
+<li class="workout">
+  <strong>Reverse Lunges</strong> –
+  <a href="https://youtu.be/1TKvF3Q2XoA" target="_blank">Demo</a>
+  <img src="https://media.tenor.com/ePY6j2YkdU4AAAAd/reverse-lunge.gif">
+</li>
+
+<li class="workout">
+  <strong>Glute Bridges</strong> –
+  <a href="https://youtu.be/m2Zx-57cSok" target="_blank">Demo</a>
+  <img src="https://media.tenor.com/lmcRbZU2kUAAAAAd/glute-bridge.gif">
+</li>
+
+<li class="workout">
+  <strong>Calf Raises</strong> –
+  <a href="https://youtu.be/-M4-G8p8fmc" target="_blank">Demo</a>
+  <img src="https://media.tenor.com/yX0qfGOSBPMAAAAd/calf-raises.gif">
+</li>
+
+<li class="workout">
+  <strong>Fast Feet</strong> –
+  <a href="https://youtu.be/8q2v8pI5pDo" target="_blank">Demo</a>
+  <img src="https://media.tenor.com/Erdrnqc5Qf8AAAAd/fast-feet.gif">
+</li>
+
+</ul>
+</div>
+
+
+<!-- WEDNESDAY -->
+<div class="day-card">
+<h3>Wednesday – Core & Stability</h3>
+<ul>
+
+<li class="workout">
+  <strong>Plank</strong> –
+  <a href="https://youtu.be/pSHjTRCQxIw" target="_blank">Demo</a>
+  <img src="https://media.tenor.com/6v6_QLuZlK8AAAAd/plank.gif">
+</li>
+
+<li class="workout">
+  <strong>Leg Raises</strong> –
+  <a href="https://youtu.be/JB2oyawG9KI" target="_blank">Demo</a>
+  <img src="https://media.tenor.com/uMcMBXNMTsMAAAAd/leg-raises.gif">
+</li>
+
+<li class="workout">
+  <strong>Heel Touches</strong> –
+  <a href="https://youtu.be/JJ0QKZ4GQ6w" target="_blank">Demo</a>
+  <img src="https://media.tenor.com/38iZAs0TSgUAAAAd/heel-taps.gif">
+</li>
+
+<li class="workout">
+  <strong>Dead Bug</strong> –
+  <a href="https://youtu.be/6U5aU4QzKy4" target="_blank">Demo</a>
+  <img src="https://media.tenor.com/4qGq-lWglk8AAAAd/dead-bug.gif">
+</li>
+
+<li class="workout">
+  <strong>Mountain Climbers</strong> –
+  <a href="https://youtu.be/6kALZikXxLc" target="_blank">Demo</a>
+  <img src="https://media.tenor.com/w8z5ruG-hsMAAAAd/mountain-climbers.gif">
+</li>
+
+</ul>
+</div>
+
+
+<!-- THURSDAY -->
+<div class="day-card">
+<h3>Thursday – Full Body Strength</h3>
+<ul>
+
+<li class="workout">
+  <strong>Push-ups</strong> –
+  <a href="https://youtu.be/_l3ySVKYVJ8" target="_blank">Demo</a>
+  <img src="https://media.tenor.com/5oI4pVZdZVgAAAAC/pushups.gif">
+</li>
+
+<li class="workout">
+  <strong>Squats</strong> –
+  <a href="https://youtu.be/aclHkVaku9U" target="_blank">Demo</a>
+  <img src="https://media.tenor.com/K0Wc0RvrR9QAAAAC/squat.gif">
+</li>
+
+<li class="workout">
+  <strong>Bedsheet Rows</strong> –
+  <a href="https://youtu.be/GN78C2zpp8o" target="_blank">Demo</a>
+  <img src="https://media.tenor.com/VlDPZ-FPFpMAAAAd/rows.gif">
+</li>
+
+<li class="workout">
+  <strong>Good Mornings</strong> –
+  <a href="https://youtu.be/8tE0xW4Pp10" target="_blank">Demo</a>
+  <img src="https://media.tenor.com/HKiHsH0CW2gAAAAd/good-morning.gif">
+</li>
+
+<li class="workout">
+  <strong>Burpees</strong> –
+  <a href="https://youtu.be/qLBImHhCXSw" target="_blank">Demo</a>
+  <img src="https://media.tenor.com/Klm6S5DuwJcAAAAd/burpee.gif">
+</li>
+
+</ul>
+</div>
+
+
+<!-- FRIDAY -->
+<div class="day-card">
+<h3>Friday – HIIT Day</h3>
+<ul>
+
+<li class="workout">
+  <strong>High Knees</strong> –
+  <a href="https://youtu.be/OAJ_J3EZkdY" target="_blank">Demo</a>
+  <img src="https://media.tenor.com/t3NrSTiXwEoAAAAC/high-knees.gif">
+</li>
+
+<li class="workout">
+  <strong>Fast Punches</strong> –
+  <a href="https://youtu.be/yE6JjdfH1nY" target="_blank">Demo</a>
+  <img src="https://media.tenor.com/Pr0sGr2PumoAAAAd/punching.gif">
+</li>
+
+<li class="workout">
+  <strong>Mountain Climbers</strong> –
+  <a href="https://youtu.be/cnyTQDSE884" target="_blank">Demo</a>
+  <img src="https://media.tenor.com/w8z5ruG-hsMAAAAd/mountain-climbers.gif">
+</li>
+
+<li class="workout">
+  <strong>Jump Squats</strong> –
+  <a href="https://youtu.be/A-cFYWvaHr0" target="_blank">Demo</a>
+  <img src="https://media.tenor.com/yq6AjVFo30MAAAAC/jump-squat.gif">
+</li>
+
+</ul>
+</div>
+
+
+<!-- SATURDAY -->
+<div class="day-card">
+<h3>Saturday – Endurance</h3>
+<ul>
+  <li>Brisk Walk (20–25 min)</li>
+  <li>Stair Work (15 min)</li>
+  <li>Jog in Place – <a href="https://youtu.be/1oed-UmAxFs" target="_blank">Demo</a></li>
+  <li>Agility Footwork – <a href="https://youtu.be/9x7F8gcKqVk" target="_blank">Demo</a></li>
+</ul>
+</div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+<div class="footer">
+  <p>Military Calisthenics Beginner Program • 2025</p>
+</div>
+
+
+<!-- PWA INIT -->
+<script src="/pwa-init.js"></script>
 </body>
 </html>
+
 
 <!-- manifest.json -->
 <script type="application/json" id="manifest-json">
@@ -190,30 +362,24 @@
 }
 </script>
 
+
 <!-- service-worker.js -->
 <script type="application/javascript" id="service-worker-js">
 const CACHE_NAME = "calisthenics-cache-v1";
-const URLS_TO_CACHE = [
-  "/",
-  "/index.html"
-];
+const URLS_TO_CACHE = ["/", "/index.html"];
 
 self.addEventListener("install", event => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => cache.addAll(URLS_TO_CACHE))
-  );
+  event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(URLS_TO_CACHE)));
 });
 
 self.addEventListener("fetch", event => {
-  event.respondWith(
-    caches.match(event.request).then(response => response || fetch(event.request))
-  );
+  event.respondWith(caches.match(event.request).then(r => r || fetch(event.request)));
 });
 </script>
 
+
 <!-- pwa-init.js -->
 <script type="application/javascript" id="pwa-init-js">
-// Triggered when new version of service worker is available
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.addEventListener("controllerchange", () => {
     alert("A new version of the app is ready. Refresh to update.");
